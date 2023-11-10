@@ -1,0 +1,12 @@
+{
+  "extends": "./node_modules/@assemblyscript/wasi-shim/asconfig.json",
+  "options": {
+    "memoryBase": 65536,
+    "transform": ["json-as/transform"]
+  },
+  "targets": {
+    "release": {
+      "optimize": "speed"
+    }
+  }
+}

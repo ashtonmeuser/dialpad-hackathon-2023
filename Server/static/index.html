@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+    <h1>Wasm Call Routing</h1>
+    <div class="form-container">
+        <form id="call-form">
+            <label for="module">Router Module</label>
+            <select id="module" name="module">
+                <option value="random">Random</option>
+                <option disabled value="round">Round Robin</option>
+                <option value="idle">Longest Idle</option>
+                <option value="country">Local Country</option>
+                <option value="area">Local Area Code</option>
+                <option value="previous">Same Customer + Agent</option>
+            </select>
+
+            <label for="number">Caller Number</label>
+            <select id="number" name="number">
+                <option value="(123) 987-6543">(123) 987-6543</option>
+                <option value="(456) 123-4567">(456) 123-4567</option>
+                <option value="(789) 246-2468">(789) 246-2468</option>
+                <option value="(246) 135-1357">(246) 135-1357</option>
+            </select>
+
+            <label for="country">Caller Country</label>
+            <select id="country" name="country">
+                <option value="US">US</option>
+                <option value="CA">CA</option>
+                <option value="IN">IN</option>
+                <option value="AR">AR</option>
+                <option value="FI">FI</option>
+                <option value="CN">CN</option>
+            </select>
+
+            <button type="button" id="call-button">CALL</button>
+        </form>
+    </div>
+
+    <div id="response-container">
+        <h2>Assigned Operator</h2>
+        <pre id="response"></pre>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
